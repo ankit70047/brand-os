@@ -14,6 +14,8 @@ dependencies = [
 
 [project.scripts]
 brand-generate = "generation.engine.main:cli"
+brand-publish = "publishing.publisher:cli"
+brand-analytics = "analytics.tracker:cli"
 
 [tool.uv]
 managed = true

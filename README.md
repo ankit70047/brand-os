@@ -1,4 +1,4 @@
-# brand-os (Spec-Driven Mono-Repo)
+# brand-os
 
 This repository is a minimal, production-oriented spec-driven mono-repo for content generation.
 

@@ -17,6 +17,7 @@ from generation.engine.loader import load_spec, resolve_first_draft
 from generation.engine.prompt_builder import build_prompt
 from generation.engine.generator import mock_llm_call
 from generation.engine.writer import write_outputs
+from shared import db
 
 
 def cli(argv: list[str] | None = None) -> int:
@@ -37,6 +38,12 @@ def cli(argv: list[str] | None = None) -> int:
     # Load constitution and set up logging
     constitution = load_constitution(args.constitution)
     logger = setup_logging(constitution)
+    # Ensure DB schema exists for analytics/publishing
+    try:
+        db.init_db()
+        logger.info("Database initialized")
+    except Exception:
+        logger.exception("Failed to initialize database")
     logger.info("Starting generation run", extra={"spec": args.spec})
 
     # Load and validate spec

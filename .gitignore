@@ -3,3 +3,12 @@ venv/
 .env
 generation/content/generated/
 uv.lock
+data/*.db
+data/*.sqlite
+.venv/
+__pycache__/
+logs/
+generated/
+node_modules/
+.github/
+.specify/
