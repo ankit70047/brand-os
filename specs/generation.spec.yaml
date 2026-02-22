@@ -1,0 +1,8 @@
+model: openai-gpt-placeholder
+temperature: 0.6
+max_tokens: 1024
+input_dir: generation/content/drafts
+output_dir: generation/content/generated
+template: generation/templates/master_transform.md
+system_role: generation/templates/system_role.md
+draft_pattern: "*.md"

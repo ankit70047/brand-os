@@ -1,0 +1,6 @@
+max_input_file_size_mb: 1
+max_tokens_allowed: 2048
+restrict_path_traversal: true
+restrict_prompt_injection: true
+logging_mask_secrets: true
+allow_external_api_calls: false
